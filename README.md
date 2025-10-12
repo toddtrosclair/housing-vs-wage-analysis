@@ -42,7 +42,7 @@ After cleaning and preparing the data, the merged dataset was analyzed to find t
 - Nationally, housing prices have have risen 100% from 2014 to 2024, while wages have only grown 40% during the same time period.
 - This divergence widened most sharply following 2020, coinciding with the pandemic and subsequent economic recovery period.
 - The home price to salary ratio increased from 5.58 to 7.94, meaning the median worker would need roughly 2.4 more years of income to be able to buy a house outright.
-<img src="C:\Users\toddt\Pictures\Screenshots\Screenshot 2025-10-12 151706.png" alt="Indexed Home Prices vs. Wages Line Chart" width="700"/>
+<img src="images/Wage_VS_Price_Line.png" alt="Indexed Wages vs Housing Prices" width="700"/>
 
 2. Income Inequality in Housing
 - The affordability ratio for all income levels show an increase from 2014 to 2024, showing peaks in 2022. In other words, the price of housing is outpacing wage growth for all income levels.
