@@ -2,7 +2,7 @@
 An Analysis of U.S. housing affordability trends from 2014-2024 using BLS wage data and Zillow home prices
 
 ## Topic Overview
-Inflation has risen to the forefront of the American psyche in recent years. Presidential candidates have made it a cornerstone of their campaigns, technocrats are scrambling to lower inflation rates to their mandated levels, and the youth are reportedly stocking up on avocado toast and starbucks "because they'll never be able to afford to buy a house anyway." To their credit, housing has been one of the top goods mentioned in the inflation debate, with many Americans complaining about skyrocketing home and rent prices. But is this true? Are home prices really becoming more unaffordable? Or is this just a case of sticker shock, with wages rising in lockstep with inflation?
+Inflation has risen to the forefront of the American psyche in recent years. Among its many effects, the cost of housing in particular is often cited as skyrocketing. But is this perception accurate? Are home prices really becoming more unaffordable? Or is this just a case of sticker shock, with wages rising in lockstep with inflation? 
 
 ## Data Sources
 This analysis combines income data from the Bureau of Labor Statistics (BLS) with housing price data from Zillow to examine the relationship between wages and housing prices in the top 100 U.S. metro areas. The specific datasets used are as listed:
@@ -19,7 +19,7 @@ Variables Used in Analysis: Average home price, Size rank, Dates, Metropolitan a
 The raw datasets from the Bureau of Labor Statistics and Zillow required a fair amount of preparation and cleaning before being able to merge them neatly into one file for proper analysis. The steps taken to prepare the final dataset include:
 
 1. BLS Occupational Employment and Wage Statistics
-- As the BLS data was contained in seperate tables for each year, to create a singular dataset containing data from 2014-2024 these tables had to be concatenated. However, column headers used by the BLS were incosistent for this time period, preventing concatenation. All column names were standardized and then the tables were concatenated to form the complete 2014-2024 dataset.
+- As the BLS data was contained in separate tables for each year, to create a singular dataset containing data from 2014-2024 these tables had to be concatenated. However, column headers used by the BLS were incosistent for this time period, preventing concatenation. All column names were standardized and then concatenated to form the complete 2014-2024 dataset.
 - The dataset was then filtered to show only the data from 'All Occupations' to get the overall picture of wages.
 - Metro area names and codes showed significant variation through the years as metropolitan area delimitations were redefined. Additionally, the metro area names followed a 'City-City-City, State' format, New York-Neward-Jersey City, NY-NJ-PA for example. On the other hand, the Zillow dataset simply listed the principal city of each metro. Due to the inconsistencies throughout the years in the BLS dataset, all metros were converted to the Zillow format by separating the cities on the '-' and dropping the state using regex.
 - The now seperated city names were then exploded to their own rows to allow for merging with the Zillow table.
@@ -52,10 +52,21 @@ After cleaning and preparing the data, the merged dataset was analyzed to find t
 <img src="images/Affordability_Gap.png" alt="Indexed Wages vs Housing Prices" width="700"/>
 
 3. Geographic Trends
-- The top 3 most affordable metros in 2024 are Toledo, Ohio, Jackson Mississippi, and Wichita, Kansas, all with affordability ratios of 4.53 or below.
-- The top 3 most unaffordable metros in 2024 are San Jose, California, Oxnard, California, and Los Angeles, California, with affordability ratios ranging from 17.42 in LA to 18.37 in Oxnard.
+- The top 3 most affordable metros in 2024 are Toledo, OH, Jackson MS, and Wichita, KS, all with affordability ratios of 4.53 or below.
+- The top 3 most unaffordable metros in 2024 are San Jose, CA, Oxnard, CA, and Los Angeles, CA, with affordability ratios ranging from 17.42 in LA to 18.37 in Oxnard.
 - The nation's most populous state, California, is also the most unaffordable, with 7 Californian metros being in the top 10 most unaffordable.
 - The west in general has higher home price-to-income ratios compared to the rest of the country. Other relatively unaffordable areas are coastal northeastern metros and Florida. On the other side of the spectrum, midwestern, southern and non-coastal northeastern cities tend to have home price-to income ratios below the national average.
 <img src="images/Affordability_Map.png" alt="Indexed Wages vs Housing Prices" width="700"/>
+
+## Dashboard
+<img src="images/Dashboard.png" alt="Indexed Wages vs Housing Prices" width="700"/>
+
+## Tools Used
+1. Python (Pandas, Regex, Matplotlib, Seaborn, Jupyter Notebook) - For data cleaning, transformation, and analysis
+2. Power BI - For building the fully interactive dashboard to visualize key insights
+3. GitHub - For project presentation
+4. Excel - For occasional data inspection and validation
+
+
 
 
